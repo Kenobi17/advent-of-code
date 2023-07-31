@@ -1,4 +1,4 @@
-package main
+package one
 
 import (
 	"bufio"
@@ -8,12 +8,12 @@ import (
 	"strconv"
 )
 
-func main() {
-	caloriesList := "./big-input.txt"
+func DayOne() {
+	caloriesTxt := "./day-1/big-input.txt"
 
-	buffer, err := os.Open(caloriesList)
+	buffer, err := os.Open(caloriesTxt)
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
 	fileScanner := bufio.NewScanner(buffer)
